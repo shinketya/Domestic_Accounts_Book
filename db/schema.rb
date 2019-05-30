@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_30_060829) do
+ActiveRecord::Schema.define(version: 2019_05_30_132258) do
 
   create_table "calenders", force: :cascade do |t|
     t.integer "genre"
     t.integer "money"
     t.text "memo"
-    t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "date"
   end
 
   create_table "genres", force: :cascade do |t|

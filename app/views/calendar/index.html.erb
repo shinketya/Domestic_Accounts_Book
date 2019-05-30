@@ -1,0 +1,10 @@
+<%= month_calendar do |date| %>
+    <%= link_to(date, "/day/#{date}") %>
+    <% money = 0 %>
+    <% if @calendars.find_by(date: date.to_s).present? == true %>
+    <% money = @calendars.find_by(date: date.to_s).money %>
+    <% end %>
+    <div>
+      <%= money %>
+    </div>
+  <% end %>
