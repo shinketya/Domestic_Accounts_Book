@@ -1,0 +1,16 @@
+<h1>
+<%= params[:date] %>
+</h1>
+<% date = params[:date] %>
+<% @days.each do | day | %>
+<p>
+<%=  day.genre %>
+<%=  day.money %>
+</p>
+<% end %>
+
+<%= form_tag("/day/#{date}", method: :post) do %>
+  <input type="integer" name="genre">
+  <input type="integer" name="money">
+  <input type="submit">
+<% end %>
